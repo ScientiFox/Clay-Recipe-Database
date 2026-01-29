@@ -1,0 +1,77 @@
+
+<input type="text" id="{type}" size="10" value="Type">
+<input type="text" id="{name}" size="10" value="Name">
+<input type="text" id="{cone}" size="10" value="Cone">
+<input type="text" id="{surface}" size="10" value="Surface">
+<input type="text" id="{transparency}" size="10" value="Transparency">
+<br/>
+<input type="file" id="theImage" name="theImage" accept="image/*" onchange="getIm()">
+<br/>
+<input type="submit" value="Submit" onclick="sendCard();">
+
+
+            <div class="recipe-card clay">
+		<table>
+			<tbody id="table1">
+			<tr>
+				<td>
+	        	    	    <div class="card-header">
+	        	    	        <div class="card-type"><span id="#type"></span> RECIPE</div>
+	        	    	        <div class="recipe-name"><span id="#name"></span></div>
+	        	    	        <div class="recipe-number"> Δ<span id="#cone"></span> |  </div>
+	        	    	    </div>
+				</td>
+				<td>
+				
+					 <img id="img" src="" style="height:160px;float:right;"> 
+				</td>
+			</tr>
+			</tbody>
+		</table>
+
+
+                <div class="info-box important">
+                    <div class="section-label">FIRING INFO </div>
+                    <div class="section-content">
+                        <strong>Type:</strong> <span id="#type2"></span> | <strong>Surface:</strong> <span id="#surface"></span><br>
+                        <strong>Transparency:</strong> <span id="#transparency"></span> 
+                    </div>
+                </div>
+                
+                
+                <!--<div class="info-box important">
+                    <div class="section-label">BATCH SIZE</div>
+                    <div class="section-content">
+                        <strong>10 kg (22 lbs)</strong> - One small batch
+                    </div>
+                </div>-->
+                
+                <div class="info-box">
+                    <div class="section-label">INGREDIENTS</div>
+                    <table class="ingredients-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70%">Material</th>
+                                <th style="width: 30%">Units</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+		<div id="#ingredients">
+			
+		</div>
+
+		<div style="display:flex;padding:2px;">
+			<div style="width:50%;">
+				<input type="text" id="{ingr}" size="10" value="Ingredient" onkeypress="keyAddIngr(event);">
+				<input type="text" id="{amt}" size="10" value="Amount" onkeypress="keyAddIngr(event);">
+			</div>
+
+			<div style="width:50%;text-align:right;">
+				<span style="color:blue;" onclick="addIngr();">Add Ingredient<span>
+			</div>
+
+                </div>
+                
+            </div>
